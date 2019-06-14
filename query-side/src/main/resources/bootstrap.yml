@@ -11,3 +11,6 @@ spring:
       retry:
         initialInterval: 2000
         maxAttempts: 30
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/products_test

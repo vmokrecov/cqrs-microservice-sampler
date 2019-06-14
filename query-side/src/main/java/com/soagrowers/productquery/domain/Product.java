@@ -3,13 +3,15 @@ package com.soagrowers.productquery.domain;
 
 //import org.springframework.data.annotation.Id;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
  * Created by ben on 07/10/15.
  */
-@Entity
+@Document(collection = "product_test")
 public class Product {
 
     @Id

@@ -2,15 +2,17 @@ package com.soagrowers.productquery.repository;
 
 
 import com.soagrowers.productquery.domain.Product;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by ben on 07/10/15.
  */
-@NoRepositoryBean
-public interface ReadOnlyPagingAndSortingRepository extends PagingAndSortingRepository<Product, String> {
+@Repository
+public interface ReadOnlyPagingAndSortingRepository extends MongoRepository<Product, String> {
 
     @Override
     @SuppressWarnings("unchecked")

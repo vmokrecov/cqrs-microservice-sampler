@@ -9,6 +9,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,7 @@ import java.util.List;
  * Created by ben on 07/10/15.
  */
 
+@EnableMongoRepositories
 @EnableEurekaClient
 @SpringBootApplication
 @EntityScan("com.soagrowers.productquery.domain")

@@ -55,6 +55,7 @@ services:
     image: benwilcock/product-query-side:latest
     container_name: product-qry-side
     depends_on:
+     - mongodb
      - rabbitmq
      - discovery
      - config
